@@ -6,6 +6,14 @@ npm ci
 ```
 
 # Run tests
-``` 
-npx jest -- verbose  
+```bash 
+npx jest --verbose  
 ```
+run only test
+```bash
+npx jest exchanges -t "<name>"
+```
+
+# Mock Requests
+
+use https://github.com/jefflau/jest-fetch-mock in setup.ts

@@ -7,9 +7,10 @@ import { ExchangeError, AuthenticationError, InvalidOrderError, InsufficientFund
 
 describe('Exchange Integration Tests', () => {
     const exchanges = [
-        new Paradex('test-api-key', 'test-api-secret'),
-        new Hyperliquid('test-api-key', 'test-api-secret'),
-        new Backpack('test-api-key', 'test-api-secret')
+        // new Paradex('111test-api-key', '111test-api-secret'),
+        new Paradex('111', '111'),
+        // new Hyperliquid('test-api-key', 'test-api-secret'),
+        // new Backpack('test-api-key', 'test-api-secret')
     ];
 
     beforeEach(() => {

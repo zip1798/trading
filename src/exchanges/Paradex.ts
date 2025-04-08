@@ -5,12 +5,21 @@ import { ExchangeError } from '../errors/ExchangeError';
 import * as crypto from 'crypto';
 
 export class Paradex extends BaseExchange {
+
+    private publicKey: string = "";
+    private privateKey: string = "";
+
     constructor(
         apiKey: string,
         apiSecret: string,
-        baseUrl: string = 'https://api.paradex.io/v1'
+        baseUrl: string = 'https://api.testnet.paradex.trade/v1', // 'https://api.paradex.io/v1'
     ) {
         super(apiKey, apiSecret, baseUrl);
+    }
+
+    setKeys(publicKey: string, privateKey: string): void {
+        this.publicKey = publicKey;
+        this.privateKey = privateKey;
     }
 
     protected signRequest(path: string, params: any = {}): string {
